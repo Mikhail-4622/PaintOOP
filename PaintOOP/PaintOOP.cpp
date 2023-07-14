@@ -35,25 +35,25 @@ struct Brush {
         if (console.is_pressed(VK_LEFT)) {
             if (x > 0) {
                 x--;
-                timer = 3;
+                timer = 1;
             }
         }
         if (console.is_pressed(VK_RIGHT)) {
             if (x < CANVAS_W-1) {
                 x++;
-                timer = 3;
+                timer = 1;
             }
         }
         if (console.is_pressed(VK_UP)) {
             if (y > 0) {
                 y--;
-                timer = 3;
+                timer = 1;
             }
         }
         if (console.is_pressed(VK_DOWN)) {
             if (y < CANVAS_H - 1) {
                 y++;
-                timer = 3;
+                timer = 1;
             }
         }
     }
@@ -131,7 +131,7 @@ int main() {
             console.pixel(25+i*2, CANVAS_H + 1, ' ', palette[i]);
         }
 
-        console.flip(60);
+        console.flip();
     }
     return 0;
 }
